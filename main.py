@@ -5,9 +5,9 @@ import shutil
 import sys
 from packaging import version
 #https://github.com/Joker-Masr2/Updates-/upload/main
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 REPO = "Joker-Masr2/Updates-"  # غيرها
-
+print("hi")
 # -----------------------------
 # Check for updates
 # -----------------------------
