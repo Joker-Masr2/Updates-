@@ -14,15 +14,25 @@ It can be integrated into the main tool to automatically check for updates on Gi
 
 ---
 
-## Features
+## 🔄 Auto Update
 
-- Check for latest release on GitHub.
-- Download and install updates automatically.
-- Replace existing files safely.
-- Restart the main tool after updating.
-- Handles update errors gracefully.
+This tool supports **automatic self-updating** from GitHub. Here's how it works:
 
----
+1. The tool uses the **GitHub API** to check the latest **release** of the repository.
+2. Each new release must have a **Tag** (e.g., `v1.0`, `v1.1`).
+3. The code compares this tag with the current version (`__version__`) in the script.
+4. If the latest version is different from the current version:
+   - The tool downloads the ZIP file of the latest release.
+   - It extracts the files.
+   - It replaces the old files with the new ones.
+   - Finally, it **restarts itself automatically** so the update takes effect.
+
+### ⚠️ Important Notes
+- Without a **Tag**, the tool cannot detect the new release, so no update will be downloaded.
+- Make sure to update the `__version__` in the code for every important release.
+
+### 💡 Tip
+Always create a **Tag** on GitHub for every new release to ensure the auto-update works smoothly.---
 
 ## Integration
 
